@@ -18,8 +18,7 @@ public class Demo2Error {
 		mono.subscribe(
 				x -> System.out.println("onNext:"+x), 
 				x -> System.out.println("onError: " + x.getMessage()), 
-				() -> System.out.println("onCompelete: Done."));
-		
+				() -> System.out.println("onComplete: Done."));
 		
 		
 	}

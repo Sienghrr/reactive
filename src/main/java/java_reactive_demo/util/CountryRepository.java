@@ -8,7 +8,7 @@ import reactor.core.publisher.Mono;
 
 public class CountryRepository {
 	
-	public static Mono<String>  findByid(int countryId) {
+	public static Mono<String>  findById(int countryId) {
 		if(countryId == 1) {
 			return Mono.just(Faker.instance().country().name());
 		}else if(countryId == 2){

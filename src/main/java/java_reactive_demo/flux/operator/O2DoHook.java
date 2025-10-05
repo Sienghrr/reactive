@@ -34,5 +34,8 @@ public class O2DoHook {
 			
 
 	}
+    // dofirst output : 3,2,1
+    // doOnSubscribe:  output : 1,2
+
 
 }

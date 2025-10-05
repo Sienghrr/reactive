@@ -15,7 +15,7 @@ public class Demo6Pipeline {
 		
 		getName();
 		getName()
-			.subscribeOn(Schedulers.boundedElastic())
+			.subscribeOn(Schedulers.boundedElastic()) // allow to run getName() method at the same time to need to wait
 			.subscribe(x -> System.out.println(x));
 		getName();
 		Util.sleep(4);

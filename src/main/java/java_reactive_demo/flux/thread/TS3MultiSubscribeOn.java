@@ -11,12 +11,15 @@ public class TS3MultiSubscribeOn {
 			printThreadName("create");
 			sink.next(10);
 		})
-		.subscribeOn(Schedulers.newParallel("piseth"))
+        // and the thread that are closer to the publisher is the one that use to process data
+        // in these case thread sieng is closer than boundedElastic , so thread sieng will be the one who
+        // process data
+		.subscribeOn(Schedulers.newParallel("sieng"))// use parallel for cpu intensive task
 		.doOnNext(x -> printThreadName("next: " + x));
 		
 		flux
 			.doFirst(() -> printThreadName("doFirst2:"))
-			.subscribeOn(Schedulers.boundedElastic())
+			.subscribeOn(Schedulers.boundedElastic()) // use boundedElastic when in case network/time-consuming (ex: retrieve data from db)
 			.doFirst(() -> printThreadName("doFirst1:"))
 			.subscribe(x -> printThreadName("sub: " + x));
 		

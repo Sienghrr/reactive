@@ -21,7 +21,8 @@ public class O4DelayElement {
 		.subscribe(Util.subscriber());
 		
 		Util.sleep(60);
-		
+
+        // when we delay element , we need to block main thread to see output
 		
 		//Queues
 		

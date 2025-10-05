@@ -23,12 +23,12 @@ public class HomeworkStockPrice {
 				public void onSubscribe(Subscription s) {
 					// TODO Auto-generated method stub
 					this.subscription = s;
-					s.request(Long.MAX_VALUE);
+					s.request(Long.MAX_VALUE);// get maximum request from producer
 				}
 
 				@Override
 				public void onNext(Integer t) {
-					System.out.println("Recieved: " + t);
+					System.out.println("Received: " + t);
 					if(t > 105 || t < 90) {
 						this.subscription.cancel();
 					}

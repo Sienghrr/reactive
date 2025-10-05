@@ -7,7 +7,7 @@ public class Demo7ReadFile {
 
 	public static void main(String[] args) {
 		FileService.read("file1.txt")
-			.subscribe(Util.onNext(), Util.onError(),Util.onComplete());;
+			.subscribe(Util.onNext(), Util.onError(),Util.onComplete());
 		
 		
 	}

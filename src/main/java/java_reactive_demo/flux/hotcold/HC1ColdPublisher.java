@@ -9,8 +9,13 @@ import reactor.core.publisher.Flux;
 public class HC1ColdPublisher {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+		// cold and hot publisher
+        // cold-publisher : seperated streaming data (ex: I have account netflix and others also have
+        // theirs and example when we watch a movie title A , I can watch anytime and watch from the
+        // beginning , and other also)
+
+        // hot-publisher: not seperated (ex: someone livestream start from 5pm, and i join at 5pm
+        // so i get full info, and you join at 6pm , you will miss the info from 5-6pm)
 		Flux<String> flux = Flux.fromStream(() -> getMovies())
 			.delayElements(Duration.ofSeconds(2));
 		

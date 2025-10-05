@@ -12,6 +12,9 @@ public class BP5OverflowError {
 		
 		Flux.create(sink ->{
 			for(int i=1; i<501 && !sink.isCancelled(); i++) {
+                //!sink.isCancelled()
+                // we add extra condition , cuz we want our publisher to stop producing
+                // when facing error
 				System.out.println("Pushed: " + i);
 				sink.next(i);
 				Util.sleepMili(1);

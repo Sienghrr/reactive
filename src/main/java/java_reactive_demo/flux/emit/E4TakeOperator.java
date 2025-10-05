@@ -9,7 +9,7 @@ public class E4TakeOperator {
 		/*
 		Flux.range(1, 10)
 			.log()
-			.take(3) // cancel
+			.take(3) // cancel when we got 3 items
 			.log()
 			.subscribe(Util.subscriber());
 		

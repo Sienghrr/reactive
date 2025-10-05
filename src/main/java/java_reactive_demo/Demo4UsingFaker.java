@@ -17,8 +17,7 @@ public class Demo4UsingFaker {
 //			System.out.println(name);
 //		}
 		
-		
-		CountryRepository.findByid(24)
+		CountryRepository.findById(22)
 			.subscribe(Util.onNext(), Util.onError(),Util.onComplete());
 		
 	}

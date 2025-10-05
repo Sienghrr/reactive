@@ -9,9 +9,9 @@ public class StockPriceGenerator {
 	private AtomicInteger atomicInteger = new AtomicInteger(100);
 	
 	public Flux<Integer> getPrice(){
-		return Flux.interval(Duration.ofSeconds(1))
+		return Flux.interval(Duration.ofSeconds(1)) // every 1 second
 			.map(x -> atomicInteger.accumulateAndGet(
-					Util.faker().random().nextInt(-3, 3), 
+					Util.faker().random().nextInt(-3, 3), // the price that can change between 3 and -3
 					(a,b) -> a + b));
 	}
 
