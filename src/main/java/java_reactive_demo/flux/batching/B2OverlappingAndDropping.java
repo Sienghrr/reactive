@@ -10,7 +10,7 @@ public class B2OverlappingAndDropping {
 	public static void main(String[] args) {
 		
 		fluxStream()
-			.buffer(1,10)
+			.buffer(1,10)// 10 items take 1 to examine
 			.subscribe(Util.subscriber());
 		
 		Util.sleep(20);

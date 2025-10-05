@@ -6,6 +6,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import java_reactive_demo.flux.batching.b3util.BookOrder;
+import java_reactive_demo.flux.batching.b3util.RevenueReport;
 import java_reactive_demo.util.Util;
 import reactor.core.publisher.Flux;
 

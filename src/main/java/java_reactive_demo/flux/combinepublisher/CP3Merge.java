@@ -10,11 +10,15 @@ public class CP3Merge {
 
 	public static void main(String[] args) {
 		
-			Flux.concat(
+			Flux.merge(
 					AirAsia.getFlight(),
 					AngkorAirline.getFlight(),
-					BangkokAir.getFlight()
-					)
+					BangkokAir.getFlight())// use merge for parallel processing
+//					).concat(
+//					AirAsia.getFlight(),
+//					AngkorAirline.getFlight(),
+//					BangkokAir.getFlight()
+//					) if we use concat , it is not parallel processing
 			.subscribe(Util.subscriber());
 		
 			

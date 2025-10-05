@@ -1,11 +1,10 @@
 package java_reactive_demo.flux.combinepublisher.util;
 
-import java.time.Duration;
-import java.util.ArrayList;
-import java.util.List;
-
 import java_reactive_demo.util.Util;
 import reactor.core.publisher.Flux;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class StringGenerator {
 	
@@ -21,8 +20,8 @@ public class StringGenerator {
 			Util.sleep(1);
 			sink.next(name);
 		})
-		.cast(String.class)
-		.startWith(getFromCache());
+		.cast(String.class) // convert to String
+		.startWith(getFromCache()); //combine publisher by using startWith
 		
 	}
 	

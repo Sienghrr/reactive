@@ -1,4 +1,4 @@
-package java_reactive_demo.flux.batching;
+package java_reactive_demo.flux.batching.b3util;
 
 import java.time.LocalDateTime;
 import java.util.Map;
