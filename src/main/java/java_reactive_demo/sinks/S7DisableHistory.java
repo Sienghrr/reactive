@@ -11,8 +11,8 @@ import reactor.core.publisher.Sinks.UnicastSpec;
 public class S7DisableHistory {
 
 	public static void main(String[] args) {
-		
-	// sink = publisher	
+	// directAllOrNothing() : use for clear old item in queues before subscribe
+	// sink = publisher
 	Many<Object> sink = Sinks.many().multicast().directAllOrNothing();
 	// flux use by subscriber
 	Flux<Object> flux = sink.asFlux();

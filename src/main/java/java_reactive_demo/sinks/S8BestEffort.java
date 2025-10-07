@@ -13,7 +13,9 @@ import reactor.core.publisher.Sinks.UnicastSpec;
 public class S8BestEffort {
 
 	public static void main(String[] args) {
-		
+	// .directBestEffort() : use for separate speed of consumer	, ex: rith is slower than dara
+        // so Dara will get more than rith , but if we use directAllOrNothing() both rith and dara
+        // will have the same item
 	// sink = publisher	
 	Many<Object> sink = Sinks.many().multicast().directBestEffort();
 	// flux use by subscriber

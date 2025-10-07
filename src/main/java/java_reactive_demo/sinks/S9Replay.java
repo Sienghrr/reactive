@@ -13,7 +13,7 @@ public class S9Replay {
 	public static void main(String[] args) {
 		
 	// sink = publisher	
-	Many<Object> sink = Sinks.many().replay().all();
+	Many<Object> sink = Sinks.many().replay().all(); // for replay old history , ex (telegram have option hide/show history for newer come)
 	// flux use by subscriber
 	Flux<Object> flux = sink.asFlux();
 	

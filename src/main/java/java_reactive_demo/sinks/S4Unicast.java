@@ -12,7 +12,8 @@ public class S4Unicast {
 
 	public static void main(String[] args) {
 		
-	// sink = publisher	
+	// sink = publisher
+    // unicast : one publisher , one subscriber
 	Many<Object> sink = Sinks.many().unicast().onBackpressureBuffer();
 	// flux use by subscriber
 	Flux<Object> flux = sink.asFlux();
