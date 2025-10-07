@@ -1,4 +1,4 @@
-package java_reactive_demo.flux.batching;
+package java_reactive_demo.flux.batching.b6util;
 
 import java.util.function.Function;
 

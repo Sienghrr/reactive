@@ -1,4 +1,4 @@
-package java_reactive_demo.flux.batching;
+package java_reactive_demo.flux.batching.b6util;
 
 import java_reactive_demo.util.Util;
 import lombok.Data;

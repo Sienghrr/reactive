@@ -13,7 +13,7 @@ public class R3Retry {
 
 	public static void main(String[] args) {
 		flux()
-			.retryWhen(Retry.fixedDelay(2, Duration.ofSeconds(2)))
+			.retryWhen(Retry.fixedDelay(2, Duration.ofSeconds(2)))//expect error to retry
 			.subscribe(Util.subscriber());
 		
 		Util.sleep(20);

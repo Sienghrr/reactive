@@ -12,7 +12,8 @@ public class R2Repeat {
 	public static void main(String[] args) {
 		flux()
 			//.repeat(() -> atomicInteger.get() < 5)
-			.repeat()
+			.repeat() // it won't repeat process if have error occur
+                // , because repeat wait for complete signal to process
 			.subscribe(Util.subscriber());
 	}
 	
